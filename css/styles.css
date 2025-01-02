@@ -1,9 +1,21 @@
+/* CUSTOM PROPIERTY*/
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+
+}
+
+
 /* html y body las utilizo con estos valores para que los rem se adapten mejor a las pantallas*/
 html{
     font-size: 62.5%;
 }
 body{
     font-size: 16px; /* 1rem = 10px */
+    font-family: "Krub", serif; /* FUENTE DE LA PAGINA*/
 }
 
 
@@ -12,6 +24,37 @@ h1 {
 }
 span{
     font-size: 1.3rem;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+.contenedor{
+    max-width:120rem; /*toma maximo 120px sino toma el 100%*/
+    margin: 0 auto;
+}
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--secundario);
+    padding: 1rem;
+}
+
+@media(min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row; /* el flex vuelve a su estado original*/
+        justify-content: space-between;
+    }
+}
+.navegacion-principal a {
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 700;
+}
+.navegacion-principal a:hover{
+    color: var(--primario);
 }
 
 
